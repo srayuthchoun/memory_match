@@ -1,0 +1,81 @@
+body {
+    background-image: url(images/saloon_bar.jpg);
+    width: 1200px;
+}
+header {
+    width: 95vw;
+    font-size: 3em;
+    color: white;
+    text-shadow: 8px 8px 10px red;
+    text-align: center;
+}
+header h5 {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    bottom: 30px;
+}
+header img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10px;
+    right: 435px;
+}
+header button {
+    background: #428BCA;
+    color: #fff;
+    font-size: 18px;
+    height: 45px;
+    width: 100px;
+    margin: 15px 15px;
+    text-align: center;
+    border: 0;
+    position: relative;
+    left: 100px;
+}
+section{
+    width: 100vw;
+}
+#gameArea {
+    display: inline-block;
+    width: 65vw;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px blue;
+    vertical-align: top;
+}
+#statsContainer {
+    display: inline-block;
+    width: 25vw;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px blue;
+}
+.cardContainer{
+    position: relative;
+    float: left;
+
+}
+.cardContainer img {
+    width: 150px;
+    height: 220px;
+
+}
+.card_front, .card_back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0s;
+    top: 100px;
+}
+.card_back {
+    transform: rotateY(-180deg);
+}
+.cardContainer:hover .card_front {
+    transform: rotateY(-180deg);
+}
+.cardContainer:hover .card_back{
+    transform: rotateY(0);
+}
