@@ -1,6 +1,6 @@
 body {
     background-image: url(images/saloon_bar.jpg);
-    width: 1200px;
+    width: 100vw;
 }
 header {
     width: 95vw;
@@ -8,6 +8,7 @@ header {
     color: white;
     text-shadow: 8px 8px 10px red;
     text-align: center;
+    border: solid black;
 }
 header h5 {
     display: inline-block;
@@ -24,7 +25,7 @@ header img {
     top: 10px;
     right: 10vw;
 }
-header button {
+section button {
     background: #428BCA;
     color: #fff;
     font-size: 18px;
@@ -32,48 +33,45 @@ header button {
     width: 100px;
     margin: 15px 15px;
     text-align: center;
-    border: 0;
-    position: relative;
-    left: 100px;
+    border: 1px solid;
 }
 section{
     width: 100vw;
 }
-#gameArea {
+.cardArea {
     display: inline-block;
-    width: 65vw;
-    color: white;
-    text-shadow: 4px 4px 8px blue;
+    width: 74vw;
     vertical-align: top;
+    border: solid red;
 }
 #statsContainer {
     display: inline-block;
-    width: 25vw;
+    width: 20vw;
     text-align: center;
     color: white;
     text-shadow: 4px 4px 8px blue;
+    border: solid green;
 }
-
 .cardFlip {
     position: relative;
     width: 150px;
     height: 220px;
-}
-.cardFlip.h:hover .front, .cardFlip.h.flip .front{
-    transform: rotateY(180deg);
+    padding: 10px;
 }
 .cardFlip.h:hover .back, .cardFlip.h.flip .back{
+    transform: rotateY(180deg);
+}
+.cardFlip.h:hover .front, .cardFlip.h.flip .front{
     transform: rotateY(0deg);
 }
-.cardFlip.h .back{
+.cardFlip.h .front{
     transform: rotateY(-180deg);
 }
-.cardFlip .front, .cardFlip .back
-{
+
+.cardFlip .front, .cardFlip .back {
     position:absolute;
     width: 100%;
     height: 100%;
-    transition: all 0.5s ease-in;
     padding: 10px;
     backface-visibility: hidden;
 
@@ -81,8 +79,8 @@ section{
 .cardFlip img{
     width: 150px;
     height: 220px;
-    border: solid darkred;
-    border-radius: 20px;
+    border: 5px solid darkred;
+    border-radius: 25px;
 }
 .front .back, .cardFlip{
     display: inline-block;

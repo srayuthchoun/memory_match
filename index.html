@@ -5,19 +5,19 @@
     <title>Memory Match v0.1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 </head>
 <body>
 <header>
     <img src="images/moonshine-jug.png" alt="moonshine">
-    <h5>GAME MENU</h5>
-    <button class="reset">Reset Game</button>
+    <h5>Memory Match</h5>
 </header>
 
 <section>
     <div id="statsContainer">
         <h3>STATS:</h3>
         <div class="games-played">
-            <label>Games Played</label>
+            <label class="label">Games Played</label>
         </div><br>
         <div class="attempts">
             <label class="label">Attempts</label>
@@ -28,174 +28,173 @@
         <div class="accuracy">
             <label class="label">Accuracy</label>
         </div>
+        <button class="reset">Reset Game</button>
     </div>
-    <div id="gameArea">
-        <div class="game-area">
-            <div class="cardContainer1">
+    <div class="cardArea">
+        <div id="game-area">
 
-                <div class="cardFlip h"> <!--Hakashu Card-->
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
+            <div class="cardFlip h card"> <!--Hakushu Card #1-->
+                <div class="front">
+                    <img src="images/suntory_hakushu.jpg" alt="hakushu">
                 </div>
-
-                <div class="cardFlip h"> <!--Hakashu Card-->
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
                 </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
-                <div class="cardFlip h">
-                    <div class="front">
-                        <img src="images/two_toast.png" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/hakushu_japanese_whiskey_12yr.gif" alt="toast">
-                    </div>
-                </div>
-
             </div>
+
+            <div class="cardFlip h card"> <!--Hakushu Card #2-->
+                <div class="front">
+                    <img src="images/suntory_hakushu.jpg" alt="hakushu">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Jack Daniels Card #1-->
+                <div class="front">
+                    <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Jack Daniels Card #2-->
+                <div class="front">
+                    <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Old Potrero Card #1-->
+                <div class="front">
+                    <img src="images/old_potrero.jpg" alt="old_potrero">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Old Potrero Card #2-->
+                <div class="front">
+                    <img src="images/old_potrero.jpg" alt="old_potrero">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Makers Mark Card #1-->
+                <div class="front">
+                    <img src="images/makers_mark.jpg" alt="makers_mark">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Makers Mark Card #2-->
+                <div class="front">
+                    <img src="images/makers_mark.jpg" alt="makers_mark">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Glenlivet Card #1-->
+                <div class="front">
+                    <img src="images/glenlivet.jpg" alt="glenlivet">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Glenlivet Card #2-->
+                <div class="front">
+                    <img src="images/glenlivet.jpg" alt="glenlivet">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Gentlemen Jack Card #1-->
+                <div class="front">
+                    <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Gentlemen Jack Card #2-->
+                <div class="front">
+                    <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+           <div class="cardFlip h card"> <!--Jameson Card #1-->
+                <div class="front">
+                    <img src="images/jameson.jpg" alt="jameson">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Jameson Card #2-->
+                <div class="front">
+                    <img src="images/jameson.jpg" alt="jameson">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Woodford Card #1-->
+                <div class="front">
+                    <img src="images/woodford_reserve.jpg" alt="woodford">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Woodford Card #2-->
+                <div class="front">
+                    <img src="images/woodford_reserve.jpg" alt="woodford">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Yamazaki Card #1-->
+                <div class="front">
+                    <img src="images/yamazaki.jpg" alt="yamazaki">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
+            <div class="cardFlip h card"> <!--Yamazaki Card #2-->
+                <div class="front">
+                    <img src="images/yamazaki.jpg" alt="yamazaki">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
