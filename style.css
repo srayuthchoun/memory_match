@@ -21,12 +21,17 @@ header h5 {
 }
 header img {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 115px;
+    height: 115px;
     position: relative;
 
 }
-section button {
+header a {
+    font-family: "Comic Sans MS";
+    color: white;
+    position: relative;
+}
+.cardSection button {
     background: #428BCA;
     color: #fff;
     font-size: 16px;
@@ -35,7 +40,7 @@ section button {
     margin: 10px 10px;
     text-align: center;
 }
-section{
+.cardSection{
     width: 100vw;
 }
 .cardArea {
@@ -52,12 +57,23 @@ section{
     font-family: "Comic Sans MS";
 }
 #statsContainer div {
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#statsContainer h3 {
+    font-size: 2em;
+    margin-top: 0;
+}
+#statsContainer label {
+    font-size: 1.3em;
+}
+#statsContainer button {
+    margin-top: 50px;
 }
 .cardFlip {
     position: relative;
     width: 150px;
-    height: 220px;
+    height: 215px;
     padding: 8px;
 }
 .front, .back {
@@ -69,12 +85,33 @@ section{
 .cardFlip img{
     width: 150px;
     height: 220px;
-    border: 3px solid darkred;
+    border: 6px solid darkred;
     border-radius: 25px;
-    box-shadow: 6px 6px 8px black;
+    box-shadow: 6px 6px 8px #6b6b68;
 }
 .front .back, .cardFlip{
     display: inline-block;
+}
+.aboutSection{
+    text-align: center;
+}
+.aboutSection img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.aboutSection a {
+    font-family: "Comic Sans MS";
+    color: white;
+    font-size: 2em;
+
+}
+.aboutSection p {
+    font-family: "Comic Sans MS";
+    color: white;
+    font-size: 1em;
 }
 
 
