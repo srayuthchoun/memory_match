@@ -1,0 +1,117 @@
+body {
+    background-image: url(images/saloon_bar.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+header {
+    width: 95vw;
+    color: white;
+    text-shadow: 6px 6px 10px #a71201;
+    text-align: center;
+}
+header h5 {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    bottom: 30px;
+    font-size: 3.5em;
+    font-family: "Comic Sans MS";
+}
+header img {
+    display: inline-block;
+    width: 115px;
+    height: 115px;
+    position: relative;
+
+}
+header a {
+    font-family: "Comic Sans MS";
+    color: white;
+    position: relative;
+}
+.cardSection button {
+    background: #428BCA;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    width: 100px;
+    margin: 10px 10px;
+    text-align: center;
+}
+.cardSection{
+    width: 100vw;
+}
+.cardArea {
+    display: inline-block;
+    width: 60vw;
+    vertical-align: top;
+}
+#statsContainer {
+    display: inline-block;
+    width: 22vw;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px blue;
+    font-family: "Comic Sans MS";
+}
+#statsContainer div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#statsContainer h3 {
+    font-size: 2em;
+    margin-top: 0;
+}
+#statsContainer label {
+    font-size: 1.3em;
+}
+#statsContainer button {
+    margin-top: 50px;
+}
+.cardFlip {
+    position: relative;
+    width: 150px;
+    height: 215px;
+    padding: 8px;
+}
+.front, .back {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.cardFlip img{
+    width: 150px;
+    height: 220px;
+    border: 6px solid darkred;
+    border-radius: 25px;
+    box-shadow: 6px 6px 8px #6b6b68;
+}
+.front .back, .cardFlip{
+    display: inline-block;
+}
+.aboutSection{
+    text-align: center;
+}
+.aboutSection img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.aboutSection a {
+    font-family: "Comic Sans MS";
+    color: white;
+    font-size: 2em;
+
+}
+.aboutSection p {
+    font-family: "Comic Sans MS";
+    color: white;
+    font-size: 1em;
+}
+
+

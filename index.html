@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Match v0.1</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/moonshine-jug.png" alt="moonshine">
+        <h5>Memory Match</h5>
+        <a href="about.html">About Game</a>
+    </header>
+
+    <section class="cardSection">
+        <div id="statsContainer">
+            <h3>STATS:</h3>
+            <div class="games-played">
+                <label class="label">Games Played</label>
+                <label class="value"></label>
+            </div>
+            <br>
+            <div class="attempts">
+                <label class="label">Attempts</label>
+                <label class="value"></label>
+            </div>
+            <br>
+            <div class="accuracy">
+                <label class="label">Accuracy</label>
+                <label class="value"></label>
+            </div>
+            <br>
+            <button class="reset">Reset Game</button>
+        </div>
+
+        <div class="cardArea">
+            <div id="game-area">
+
+                <div class="cardFlip card"> <!--Hakushu Card #1-->
+                    <div class="front">
+                        <img src="images/suntory_hakushu.jpg" alt="hakushu">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Hakushu Card #2-->
+                    <div class="front">
+                        <img src="images/suntory_hakushu.jpg" alt="hakushu">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Jack Daniels Card #1-->
+                    <div class="front">
+                        <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Jack Daniels Card #2-->
+                    <div class="front">
+                        <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Old Potrero Card #1-->
+                    <div class="front">
+                        <img src="images/old_potrero.jpg" alt="old_potrero">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Old Potrero Card #2-->
+                    <div class="front">
+                        <img src="images/old_potrero.jpg" alt="old_potrero">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Makers Mark Card #1-->
+                    <div class="front">
+                        <img src="images/makers_mark.jpg" alt="makers_mark">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Makers Mark Card #2-->
+                    <div class="front">
+                        <img src="images/makers_mark.jpg" alt="makers_mark">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Glenlivet Card #1-->
+                    <div class="front">
+                        <img src="images/glenlivet.jpg" alt="glenlivet">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Glenlivet Card #2-->
+                    <div class="front">
+                        <img src="images/glenlivet.jpg" alt="glenlivet">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Gentlemen Jack Card #1-->
+                    <div class="front">
+                        <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Gentlemen Jack Card #2-->
+                    <div class="front">
+                        <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Jameson Card #1-->
+                    <div class="front">
+                        <img src="images/jameson.jpg" alt="jameson">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Jameson Card #2-->
+                    <div class="front">
+                        <img src="images/jameson.jpg" alt="jameson">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Woodford Card #1-->
+                    <div class="front">
+                        <img src="images/woodford_reserve.jpg" alt="woodford">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Woodford Card #2-->
+                    <div class="front">
+                        <img src="images/woodford_reserve.jpg" alt="woodford">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Yamazaki Card #1-->
+                    <div class="front">
+                        <img src="images/yamazaki.jpg" alt="yamazaki">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+                <div class="cardFlip card"> <!--Yamazaki Card #2-->
+                    <div class="front">
+                        <img src="images/yamazaki.jpg" alt="yamazaki">
+                    </div>
+                    <div class="back">
+                        <img src="images/yosemite_sam.jpg" alt="yosemite_sam">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
