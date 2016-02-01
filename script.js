@@ -47,7 +47,7 @@ function card_clicked(selected_card){
         return;
     }
      if (match_counter == total_possible_matches) {
-        alert('Winner!');
+        alert('Winner!'); //window pop up
     }
 }
 
