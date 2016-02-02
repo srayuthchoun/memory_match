@@ -37,19 +37,19 @@ function card_clicked(selected_card){
 
 function comparison(x, y) { //function to compare first_card_clicked and second_card_clicked
     if (x == y) { //compares first and second selected cards
+        $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
         console.log('Output: There is a match.'); //outputs if there is a match
         console.log("first card compare selected: ", x); //output value of x
         console.log("second card compare selected: ", y); //output value of  y
-        console.log("match counter: ", match_counter); //output value of match_counter
-        $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
         match_counter++; //increments the match_counter
         first_card_clicked = null; //set first_card_clicked to null
         second_card_clicked = null; //set second_card_clicked to null
+        console.log("match counter: ", match_counter); //output value of match_counter
     }
     else {
         console.log('no match'); //outputs string no match if condition is false
         $('.card_clicked').delay(1000).show(10); //sets the delay time to show the back card
-        $('.card_clicked').removeClass('card_clicked'); //removes card_click class from
+        $('.card_clicked').removeClass('card_clicked'); //removes card_click class from the selected cards
         first_card_clicked = null; //sets first_card_clicked to null
         second_card_clicked = null; //sets second_card_clicked to null
         clickReady=false; //sets clickReady to false so cards other cards can't be clicked
