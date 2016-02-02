@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 });
 
-function card_clicked(selected_card) {
+function card_clicked(selected_card) { //function with the parameter of the card clicked
 
     if(!clickReady){ //Condition to check if card can be clicked
         return;
