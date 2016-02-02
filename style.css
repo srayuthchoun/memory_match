@@ -58,14 +58,17 @@ header a {
 }
 #statsContainer div {
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 #statsContainer h3 {
     font-size: 2em;
     margin-top: 0;
 }
-#statsContainer label {
+.label {
     font-size: 1.3em;
+}
+.value {
+    color: yellow;
+    font-size: 1.5em;
 }
 #statsContainer button {
     margin-top: 50px;
@@ -85,9 +88,10 @@ header a {
 .cardFlip img{
     width: 150px;
     height: 220px;
-    border: 6px solid darkred;
+    border: 6px solid whitesmoke;
     border-radius: 25px;
-    box-shadow: 6px 6px 8px #6b6b68;
+    box-shadow: 4px 4px 6px #7b7b78;
+
 }
 .front .back, .cardFlip{
     display: inline-block;
