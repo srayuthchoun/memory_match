@@ -7,7 +7,7 @@ var clickReady = true;
 $(document).ready(function(){
     $('.card').click(function(){  //click event function on class card
         $('.back').addClass('card_clicked'); //add class card_clicked to elements of class .back
-        console.log("card_clicked on: ", this); //output the clicked card on
+        console.log('card_clicked on: ', this); //output the clicked card on
         card_clicked(this);
     });
 
@@ -39,8 +39,8 @@ function comparison(x, y) { //function to compare first_card_clicked and second_
     if (x == y) { //compares first and second selected cards
         $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
         console.log('Output: There is a match.'); //outputs if there is a match
-        console.log("first card compare selected: ", x); //output value of x
-        console.log("second card compare selected: ", y); //output value of  y
+        console.log('first card compare selected: ', x); //output value of x
+        console.log('second card compare selected: ', y); //output value of  y
         match_counter++; //increments the match_counter
         first_card_clicked = null; //set first_card_clicked to null
         second_card_clicked = null; //set second_card_clicked to null
