@@ -20,8 +20,6 @@ $(document).ready(function(){
     });
     $('.reset').click(function(){ //resets stats with reset game button is clicked
         reset_stats(); //function call to set variables back to 0
-        $('.back').show(); //shows all hidden back cards
-        games_played++; //increments game_played
     });
 });
 
@@ -91,6 +89,8 @@ function reset_stats(){ //function to reset stats
     matches = 0; //set matches to 0
     attempts = 0; //set attempts to 0
     match_counter = 0;
+    $('.back').show(); //shows all hidden back cards
+    games_played++; //increments game_played
     display_stats(); //resets the value to reset for the function
     $('.card, .front,.back').css('-webkit-filter', ''); // remove blur from cards
 }
