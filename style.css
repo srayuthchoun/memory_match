@@ -17,19 +17,21 @@ header h5 {
     margin: 0;
     bottom: 30px;
     font-size: 3.5em;
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 header img {
     display: inline-block;
     width: 115px;
     height: 115px;
     position: relative;
+    right: 50px;
 
 }
 header a {
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive, sans-serif;;
     color: white;
     position: relative;
+    left: 100px;
 }
 .cardSection button {
     background: #428BCA;
@@ -54,10 +56,10 @@ header a {
     text-align: center;
     color: white;
     text-shadow: 4px 4px 8px blue;
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive, sans-serif;;
 }
 #statsContainer div {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 #statsContainer h3 {
     font-size: 2em;
@@ -72,8 +74,10 @@ header a {
 }
 #statsContainer button {
     margin-top: 50px;
+    font-family: "Comic Sans MS", cursive, sans-serif;;
+    border-radius: 10%;
 }
-.cardFlip {
+.card {
     position: relative;
     width: 150px;
     height: 215px;
@@ -85,7 +89,7 @@ header a {
     height: 100%;
     padding: 10px;
 }
-.cardFlip img{
+.card img{
     width: 150px;
     height: 220px;
     border: 6px solid whitesmoke;
@@ -93,7 +97,7 @@ header a {
     box-shadow: 4px 4px 6px #7b7b78;
 
 }
-.front .back, .cardFlip{
+.front .back, .card{
     display: inline-block;
 }
 .aboutSection{
@@ -107,13 +111,13 @@ header a {
     margin-top: 50px;
 }
 .aboutSection a {
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive, sans-serif;;
     color: white;
     font-size: 2em;
 
 }
 .aboutSection p {
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", cursive, sans-serif;;
     color: white;
     font-size: 1em;
 }
