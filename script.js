@@ -106,6 +106,6 @@ function blurry_card() { //function to add blur to cards
     }
     if (matches == 6) {
         $('.card').css('-webkit-filter', 'blur(4px)');
-        $('.matches .value').text('Beer goggles!');
+        $('.matches .value').text('Beer goggle!');
     }
 }
