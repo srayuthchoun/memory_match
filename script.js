@@ -49,29 +49,30 @@ function card_clicked(selected_card) { //function with the parameter of the card
     calc_accuracy(); //function to calculate accuracy
 }
 //dan start
-function comparison(x, y){ //function to compare first_card_clicked and second_card_clicked
-    if (x == y) { //compares first and second selected cards
-        $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
-        match_counter++; //increments the match_counter
-        first_card_clicked = null; //set first_card_clicked to null
-        second_card_clicked = null; //set second_card_clicked to null
-        matches++; //increment matches
 
-        /* console.log('Output: There is a match.'); //outputs if there is a match
-        console.log('Number of matches:', matches); //output value of matches */
-    }
-    else {
-        $('.card_clicked').delay(1000).show(10); //sets the delay time to show the back card
-        $('.back').removeClass('card_clicked'); //removes card_click class from the selected cards
-        first_card_clicked = null; //sets first_card_clicked to null
-        second_card_clicked = null; //sets second_card_clicked to null
-        clickReady=false; //sets clickReady to false so cards other cards can't be clicked
-        setTimeout(function(){  //timeout function to turn click enable back to true
-            clickReady=true;}, 1500);
+    //The function takes two parameters. x and y are placeholders for the values that was clicked on. //
+     //statement checks if the value within x and y are equal.  If true it will process the code in between the brackets.
+         //removes card_clicked class from the card that was clicked on.
+         //match_counter will increment
+         //sets first_card_clicked to an empty value so you can add a value to it when a 1st card is clicked.
+        //set second_card_clicked to an empty value so you can add a value to it when a 2nd card is clicked.
+         //increment matches
 
-        /*console.log('No match'); //outputs string no match if condition is false */
-    }
-}
+         //Used to check if the log outputs if there is a match
+         //Used to check if log outputs value of matches
+
+    //when the if statement is false. else will run the following code between the brackets.
+         //Time to flip the cards from their front face to back.
+         //removes card_click class from the cards that was clicked
+        //sets first_card_clicked to an empty value so you can add a value to it when a 1st card is clicked.
+         //sets second_card_clicked to an empty value so you can add a value to it when a 1st card is clicked.
+         //sets clicking to false so the other cards can't be clicked
+         //timeout function to turn click enable back to true so cards can be clicked again.
+
+
+         //Used to check if the log outputs string no match if condition is false
+
+
 //dan end
 function display_stats(){  //function to add value to attempts, games-played and accuracy
     $('.attempts .value').text(attempts); //add value to attempts
