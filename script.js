@@ -48,7 +48,7 @@ function card_clicked(selected_card) { //function with the parameter of the card
     }
     calc_accuracy(); //function to calculate accuracy
 }
-
+//dan start
 function comparison(x, y){ //function to compare first_card_clicked and second_card_clicked
     if (x == y) { //compares first and second selected cards
         $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
@@ -72,7 +72,7 @@ function comparison(x, y){ //function to compare first_card_clicked and second_c
         /*console.log('No match'); //outputs string no match if condition is false */
     }
 }
-
+//dan end
 function display_stats(){  //function to add value to attempts, games-played and accuracy
     $('.attempts .value').text(attempts); //add value to attempts
     $('.games-played .value').text(games_played); //add value to games_played
