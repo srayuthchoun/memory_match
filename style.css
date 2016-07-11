@@ -19,7 +19,7 @@ header h5 {
     text-align: center;
     position: relative;
     color: white;
-    text-shadow: 6px 6px 10px #a71201;
+    text-shadow: 12px 6px 10px #a71201;
     font-size: 5vw;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
@@ -39,6 +39,10 @@ header h5 {
     width: 15%;
     height: 22vh;
     margin: .6%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3%;
 }
 
 .front .back, .card {
@@ -62,10 +66,12 @@ header h5 {
     border-radius: 3%;
 }
 
+
 footer {
     position: relative;
     top: 2vh;
     width: 70%;
+    height: 10vh;
     margin: auto;
     text-align: center;
     background-color: rgba(10, 2, 8, 0.71);
