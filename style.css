@@ -41,15 +41,10 @@ header h5 {
     margin: .6%;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     border-radius: 3%;
 }
 
-.front .back, .card {
-    display: inline-block;
-}
-
-.front, .back {
+.front .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,15 +54,32 @@ header h5 {
     width: 100%;
     height: 100%;
     border-radius: 3%;
+    top: 0;
+    left: 0;
 }
 
-.card .back {
-    background-color: black;
-    border-radius: 3%;
+.card > .back, .card > .front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -webkit-transform .3s linear 0s;
+    transition: transform .3s linear 0s;
 }
-
+.back {
+    -webkit-transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
+}
+.front {
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+}
 
 footer {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     position: relative;
     top: 2vh;
     width: 70%;
@@ -93,6 +105,7 @@ footer div {
 }
 
 .reset {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     background: #428BCA;
     color: #fff;
     font-size: 1vw;

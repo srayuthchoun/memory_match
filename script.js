@@ -12,18 +12,18 @@ var random_card_faces = [];
 $(document).ready(function(){
     randomize_cards();
 
-    $('.back').click(function(){  //click event function on class card
-        $(this).addClass('card_clicked'); //add class card_clicked to elements of class .back
+    $('.card').click(function(){  //click event function on class card
+        /*$(this).addClass('card_clicked'); //add class card_clicked to elements of class .back*/
         card_clicked(this); //function call for card clicked to compare cards
         display_stats(); //function call to display_stats
     });
+
     $('.reset').click(function(){ //resets stats with reset game button is clicked
         reset_stats(); //function call to set variables back to 0
     });
 });
 
 function randomize_cards() {
-
     var card_faces = [
         "images/aliens.jpg",
         "images/bullseye.jpg",
@@ -46,7 +46,6 @@ function randomize_cards() {
     ];
     var card_faces_length = card_faces.length;
 
-
     for (var i = 0; i < card_faces_length; i++) {
         var current_length = card_faces.length;
         var num = Math.floor(Math.random() * current_length);
@@ -57,60 +56,90 @@ function randomize_cards() {
         $('.cardSection').append('<div class="card"></div>');
         $('.card:nth-child(' + (j + 1) + ')').append('<div class="front"><img src="' + random_card_faces[j] + '"></div>');
         $('.card:nth-child(' + (j + 1) + ')').append('<div class="back"><img src="images/toy_story_logo.jpg"></div>');
-
-
-
     }
 }
 function card_clicked(selected_card) { //function with the parameter of the card clicked
-
     if(!clickReady){ //Condition to check if card can be clicked
         return;
     }
 
+    $(selected_card).find(".back").css({
+        "-webkit-transform": "perspective( 600px ) rotateY( 180deg )",
+        "transform": "perspective( 600px ) rotateY( -180deg )"
+    });
+    $(selected_card).find(".front").css({
+        "-webkit-transform": "perspective( 600px ) rotateY( 0deg )",
+        "transform": "perspective( 600px ) rotateY( 0deg )"
+    });
+
     if (first_card_clicked == null){ //checks if condition equals
-        first_card_clicked = $(selected_card).parent().find('.front > img').attr('src'); //finds img value of 1st card
-        $(selected_card).parent().find('.back').hide(); //finds class back and sets display to none
+        first_card_clicked = $(selected_card); //finds img value of 1st card
+        console.log("first_card_clicked " + first_card_clicked);
+        /*$(selected_card).find('.back').hide(); //finds class back and sets display to none*!/*/
 
-        /* console.log('first card: ', first_card_clicked); //output first card clicked */
+
     }
     else {
-        second_card_clicked = $(selected_card).parent().find('.front > img').attr('src'); //finds img value of 2nd card
-        $(selected_card).parent().find('.back').hide();  //finds class back and sets display to none
-        comparison(first_card_clicked, second_card_clicked); //function compares the 2 cards
-        ++attempts; //increment attempts
+        second_card_clicked = $(selected_card); //finds img value of 2nd card
+        console.log('second card: ', second_card_clicked); //output second card clicked
+        attempts++; //increment attempts
+        /*(selected_card).find('.back').hide();  //finds class back and sets display to none*/
+        /*comparison(first_card_clicked, second_card_clicked); //function compares the 2 cards*/
+        if ($(first_card_clicked).find('.front > img').attr('src') == $(second_card_clicked).find('.front > img').attr('src')) { //compares first and second selected cards
+            console.log("comparision");
+            /*$('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards*/
+            match_counter++; //increments the match_counter
+            calc_accuracy();
+            first_card_clicked = null; //set first_card_clicked to null
+            second_card_clicked = null; //set second_card_clicked to null
+            matches++; //increment matches
 
-        /* console.log('second card: ', second_card_clicked); //output second card clicked */
-        calc_accuracy(); //function to calculate accuracy
-        if (match_counter == total_possible_matches){ //compares the value fo match_counter and total_possible_matches
-            /*calc_accuracy(); //function to calculate accuracy*/
-            /*alert('Winner! All cards matched.'); //window pop up stating all cards matched*/
-            console.log("winner!");
         }
-    }
-}
+        else {
+            /*$('.card_clicked').delay(1000).show(10); //sets the delay time to show the back card*/
+            /*$('.back').removeClass('card_clicked'); //removes card_click class from the selected cards*/
+            console.log("comparison else");
+            clickReady=false; //sets clickReady to false so cards other cards can't be clicked
+            setTimeout(function(){  //timeout function to turn click enable back to true*/
+                console.log("flipping cards");
+                $(second_card_clicked).find('.back').css({
+                    "transform": "rotateY(0)",
+                    "transform-style": "preserve-3d",
+                    "transition": "transform .3s linear 0s",
+                    "transition": "-webkit-transform .3s linear 0s"
+                });
+                $(second_card_clicked).find('.front').css({
+                    "transform": "rotateY(-180deg)",
+                    "transform-style": "preserve-3d",
+                    "transition": "transform .3s linear 0s",
+                    "transition": "-webkit-transform .3s linear 0s"
+                });
+                $(first_card_clicked).find('.back').css({
+                    "transform": "rotateY(0)",
+                    "transform-style": "preserve-3d",
+                    "transition": "transform .3s linear 0s",
+                    "transition": "-webkit-transform .3s linear 0s"
+                });
+                $(first_card_clicked).find('.front').css({
+                    "transform": "rotateY(-180deg)",
+                    "transform-style": "preserve-3d",
+                    "transition": "transform .3s linear 0s",
+                    "transition": "-webkit-transform .3s linear 0s"
+                });
+                first_card_clicked = null; //sets first_card_clicked to null
+                second_card_clicked = null; //sets second_card_clicked to null
+                clickReady=true;
+                return;
+            }, 800);
+            console.log('No match'); //outputs string no match if condition is false
+        }
 
-function comparison(x, y){ //function to compare first_card_clicked and second_card_clicked
-    if (x == y) { //compares first and second selected cards
-        $('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards
-        match_counter++; //increments the match_counter
-        first_card_clicked = null; //set first_card_clicked to null
-        second_card_clicked = null; //set second_card_clicked to null
-        matches++; //increment matches
-
-        /* console.log('Output: There is a match.'); //outputs if there is a match
-        console.log('Number of matches:', matches); //output value of matches */
-    }
-    else {
-        $('.card_clicked').delay(1000).show(10); //sets the delay time to show the back card
-        $('.back').removeClass('card_clicked'); //removes card_click class from the selected cards
-        first_card_clicked = null; //sets first_card_clicked to null
-        second_card_clicked = null; //sets second_card_clicked to null
-        clickReady=false; //sets clickReady to false so cards other cards can't be clicked
-        setTimeout(function(){  //timeout function to turn click enable back to true
-            clickReady=true;}, 1500);
-
-        /*console.log('No match'); //outputs string no match if condition is false */
+        calc_accuracy(); //function to calculate accuracy
+/*        if (match_counter == total_possible_matches){ //compares the value fo match_counter and total_possible_matches
+            /!*calc_accuracy(); //function to calculate accuracy*!/
+            /!*alert('Winner! All cards matched.'); //window pop up stating all cards matched*!/
+            console.log("winner!");
+        }*/
     }
 }
 
@@ -126,6 +155,7 @@ function calc_accuracy(){ //function to calculate accuracy
 }
 
 function reset_stats(){ //function to reset stats
+    location.reload();
     accuracy = 0; //set accuracy to 0
     matches = 0; //set matches to 0
     attempts = 0; //set attempts to 0
@@ -134,4 +164,9 @@ function reset_stats(){ //function to reset stats
     games_played++; //increments game_played
     display_stats(); //resets the value to reset for the function
     random_card_faces = [];
+    $('.card').remove();
+    $('.front').remove();
+    $('.back').remove();
+    randomize_cards();
 }
+
