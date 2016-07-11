@@ -1,8 +1,13 @@
-body {
+* {
+    margin: 0;
+}
+
+html {
     background-image: url(images/saloon_bar.jpg);
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position:center;
+    height: 100%;
 }
 header {
     width: 95vw;
