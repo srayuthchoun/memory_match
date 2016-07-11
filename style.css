@@ -28,10 +28,12 @@ footer{
     width: 80%;
     margin: auto;
     text-align: center;
+    background-color: rgba(10, 2, 8, 0.71);
 }
 footer div {
     display: inline;
     color: white;
+    margin: 5%;
 }
 .cardSection {
     margin: auto;
