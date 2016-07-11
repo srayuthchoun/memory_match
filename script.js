@@ -7,22 +7,61 @@ var matches = 0;
 var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
+var random_card_faces = [];
 
 $(document).ready(function(){
+    randomize_cards();
+
     $('.back').click(function(){  //click event function on class card
         $(this).addClass('card_clicked'); //add class card_clicked to elements of class .back
         card_clicked(this); //function call for card clicked to compare cards
         display_stats(); //function call to display_stats
-        blurry_card(); //function call to add bluriness to the cards
-
-        /*console.log('card_clicked on: ', this); //output the clicked card on */
-
     });
     $('.reset').click(function(){ //resets stats with reset game button is clicked
         reset_stats(); //function call to set variables back to 0
     });
 });
 
+function randomize_cards() {
+
+    var card_faces = [
+        "images/aliens.jpg",
+        "images/bullseye.jpg",
+        "images/buzz_lightyear.jpg",
+        "images/hamm.jpg",
+        "images/jessie.jpg",
+        "images/mr_potato_head.jpg",
+        "images/rex.jpg",
+        "images/sheriff_woody.jpg",
+        "images/slinky_dog.jpg",
+        "images/aliens.jpg",
+        "images/bullseye.jpg",
+        "images/buzz_lightyear.jpg",
+        "images/hamm.jpg",
+        "images/jessie.jpg",
+        "images/mr_potato_head.jpg",
+        "images/rex.jpg",
+        "images/sheriff_woody.jpg",
+        "images/slinky_dog.jpg"
+    ];
+    var card_faces_length = card_faces.length;
+
+
+    for (var i = 0; i < card_faces_length; i++) {
+        var current_length = card_faces.length;
+        var num = Math.floor(Math.random() * current_length);
+        var temp = (card_faces.splice(num, 1));
+        random_card_faces.push(temp[0]);
+    }
+    for (var j = 0; j < random_card_faces.length; j++) {
+        $('.cardSection').append('<div class="card"></div>');
+        $('.card:nth-child(' + (j + 1) + ')').append('<div class="front"><img src="' + random_card_faces[j] + '"></div>');
+        $('.card:nth-child(' + (j + 1) + ')').append('<div class="back"><img src="images/toy_story_logo.jpg"></div>');
+
+
+
+    }
+}
 function card_clicked(selected_card) { //function with the parameter of the card clicked
 
     if(!clickReady){ //Condition to check if card can be clicked
@@ -42,11 +81,13 @@ function card_clicked(selected_card) { //function with the parameter of the card
         ++attempts; //increment attempts
 
         /* console.log('second card: ', second_card_clicked); //output second card clicked */
+        calc_accuracy(); //function to calculate accuracy
+        if (match_counter == total_possible_matches){ //compares the value fo match_counter and total_possible_matches
+            /*calc_accuracy(); //function to calculate accuracy*/
+            /*alert('Winner! All cards matched.'); //window pop up stating all cards matched*/
+            console.log("winner!");
+        }
     }
-    if (match_counter == total_possible_matches){ //compares the value fo match_counter and total_possible_matches
-        alert('Winner! All cards matched.'); //window pop up stating all cards matched
-    }
-    calc_accuracy(); //function to calculate accuracy
 }
 
 function comparison(x, y){ //function to compare first_card_clicked and second_card_clicked
@@ -92,20 +133,5 @@ function reset_stats(){ //function to reset stats
     $('.back').show(); //shows all hidden back cards
     games_played++; //increments game_played
     display_stats(); //resets the value to reset for the function
-    $('.card, .front,.back').css('-webkit-filter', ''); // remove blur from cards
-}
-
-function blurry_card() { //function to add blur to cards
-    if (matches == 2) {
-        $('.front').css('-webkit-filter', 'blur(1px)');
-        $('.matches .value').text('Drink on!');
-    }
-    if (matches == 4) {
-        $('.back').css('-webkit-filter', 'blur(3px)');
-        $('.matches .value').text('Feeling buzzed!');
-    }
-    if (matches == 6) {
-        $('.card').css('-webkit-filter', 'blur(4px)');
-        $('.matches .value').text('Beer goggle!');
-    }
+    random_card_faces = [];
 }
