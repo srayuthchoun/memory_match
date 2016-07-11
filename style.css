@@ -10,20 +10,23 @@ html {
     height: 100%;
 }
 header {
+    display: inline;
     width: 100%;
     color: white;
     text-shadow: 6px 6px 10px #a71201;
-    text-align: center;
+/*    text-align: center;*/
 }
 header h5 {
-    display: inline-block;
-    text-align: center;
+    display: inline;
+/*    text-align: center;*/
     position: relative;
     font-size: 3.5em;
     font-family: "Comic Sans MS", cursive, sans-serif;
 
 }
-
+header div {
+    display: inline;
+}
 header a {
     font-family: "Comic Sans MS", cursive, sans-serif;;
     color: white;
@@ -31,6 +34,9 @@ header a {
     left: 10%;
 }
 section {
+    display: flex;
+    margin: auto;
+    width: 1400px;
     position: relative;
     top: 5vh;
 }
@@ -49,19 +55,18 @@ section {
     text-align: center;
 }
 .cardArea {
-    display: inline-block;
-    width: 85%;
+    width: 100%;
     vertical-align: top;
 }
 #statsContainer {
-    display: inline-block;
-    width: 14%;
+    display: inline;
     text-align: center;
     color: white;
     text-shadow: 4px 4px 8px blue;
-    font-family: "Comic Sans MS", cursive, sans-serif;;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #statsContainer div {
+    display: inline;
     margin-top: 40px;
 }
 #statsContainer h3 {
@@ -85,7 +90,7 @@ section {
     width: 14%;
     height: 275px;
     /*padding: 8px;*/
-    margin: 1% 1%;
+    margin: 0.5%;
 }
 .front, .back {
     position:absolute;

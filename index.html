@@ -2,212 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Memory Match</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-    <header>
+<header>
+    <div class="game-title">
         <h5>Memory Match</h5>
         <!--<a href="about.html">About Game</a>-->
-    </header>
+    </div>
+    <div class="games-played">
+        <label class="label">Games Played</label>
+        <label class="value"></label>
+    </div>
+    <div class="attempts">
+        <label class="label">Attempts</label>
+        <label class="value"></label>
+    </div>
+    <div class="accuracy">
+        <label class="label">Accuracy</label>
+        <label class="value"></label>
+    </div>
+    <div class="matches">
+        <label class="label">Booze Consumed</label>
+        <label class="value"></label>
+    </div>
+    <button class="reset">Reset Game</button>
+</header>
+<section class="cardSection">
 
-    <section class="cardSection">
-        <div id="statsContainer">
-            <h3>STATS:</h3>
-            <div class="games-played">
-                <label class="label">Games Played</label><br>
-                <label class="value"></label>
+
+    <div class="cardArea">
+        <div id="game-area">
+
+            <div class="card"> <!--Hakushu Card #1-->
+                <div class="front">
+                    <img src="images/suntory_hakushu.jpg" alt="hakushu">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
             </div>
-            <br>
-            <div class="attempts">
-                <label class="label">Attempts</label><br>
-                <label class="value"></label>
+
+            <div class="card"> <!--Hakushu Card #2-->
+                <div class="front">
+                    <img src="images/suntory_hakushu.jpg" alt="hakushu">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
             </div>
-            <br>
-            <div class="accuracy">
-                <label class="label">Accuracy</label><br>
-                <label class="value"></label>
+
+            <div class="card"> <!--Jack Daniels Card #1-->
+                <div class="front">
+                    <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
             </div>
-            <br>
-            <div class="matches">
-                <label class="label">Booze Consumed</label><br>
-                <label class="value"></label>
+
+            <div class="card"> <!--Jack Daniels Card #2-->
+                <div class="front">
+                    <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
             </div>
-            <button class="reset">Reset Game</button>
+
+            <div class="card"> <!--Old Potrero Card #1-->
+                <div class="front">
+                    <img src="images/old_potrero.jpg" alt="old_potrero">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Old Potrero Card #2-->
+                <div class="front">
+                    <img src="images/old_potrero.jpg" alt="old_potrero">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Makers Mark Card #1-->
+                <div class="front">
+                    <img src="images/makers_mark.jpg" alt="makers_mark">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Makers Mark Card #2-->
+                <div class="front">
+                    <img src="images/makers_mark.jpg" alt="makers_mark">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Glenlivet Card #1-->
+                <div class="front">
+                    <img src="images/glenlivet.jpg" alt="glenlivet">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Glenlivet Card #2-->
+                <div class="front">
+                    <img src="images/glenlivet.jpg" alt="glenlivet">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Gentlemen Jack Card #1-->
+                <div class="front">
+                    <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Gentlemen Jack Card #2-->
+                <div class="front">
+                    <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Jameson Card #1-->
+                <div class="front">
+                    <img src="images/jameson.jpg" alt="jameson">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Jameson Card #2-->
+                <div class="front">
+                    <img src="images/jameson.jpg" alt="jameson">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Woodford Card #1-->
+                <div class="front">
+                    <img src="images/woodford_reserve.jpg" alt="woodford">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite sam">
+                </div>
+            </div>
+
+            <div class="card"> <!--Woodford Card #2-->
+                <div class="front">
+                    <img src="images/woodford_reserve.jpg" alt="woodford">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Yamazaki Card #1-->
+                <div class="front">
+                    <img src="images/yamazaki.jpg" alt="yamazaki">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
+            <div class="card"> <!--Yamazaki Card #2-->
+                <div class="front">
+                    <img src="images/yamazaki.jpg" alt="yamazaki">
+                </div>
+                <div class="back">
+                    <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
+                </div>
+            </div>
+
         </div>
-
-        <div class="cardArea">
-            <div id="game-area">
-
-                <div class="card"> <!--Hakushu Card #1-->
-                    <div class="front">
-                        <img src="images/suntory_hakushu.jpg" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Hakushu Card #2-->
-                    <div class="front">
-                        <img src="images/suntory_hakushu.jpg" alt="hakushu">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Jack Daniels Card #1-->
-                    <div class="front">
-                        <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Jack Daniels Card #2-->
-                    <div class="front">
-                        <img src="images/jack_daniels_whiskey.jpg" alt="jack_daniels">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Old Potrero Card #1-->
-                    <div class="front">
-                        <img src="images/old_potrero.jpg" alt="old_potrero">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Old Potrero Card #2-->
-                    <div class="front">
-                        <img src="images/old_potrero.jpg" alt="old_potrero">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Makers Mark Card #1-->
-                    <div class="front">
-                        <img src="images/makers_mark.jpg" alt="makers_mark">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Makers Mark Card #2-->
-                    <div class="front">
-                        <img src="images/makers_mark.jpg" alt="makers_mark">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Glenlivet Card #1-->
-                    <div class="front">
-                        <img src="images/glenlivet.jpg" alt="glenlivet">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Glenlivet Card #2-->
-                    <div class="front">
-                        <img src="images/glenlivet.jpg" alt="glenlivet">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Gentlemen Jack Card #1-->
-                    <div class="front">
-                        <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Gentlemen Jack Card #2-->
-                    <div class="front">
-                        <img src="images/gentlemen_jack.jpg" alt="gentlemen_jack">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Jameson Card #1-->
-                    <div class="front">
-                        <img src="images/jameson.jpg" alt="jameson">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Jameson Card #2-->
-                    <div class="front">
-                        <img src="images/jameson.jpg" alt="jameson">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Woodford Card #1-->
-                    <div class="front">
-                        <img src="images/woodford_reserve.jpg" alt="woodford">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite sam">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Woodford Card #2-->
-                    <div class="front">
-                        <img src="images/woodford_reserve.jpg" alt="woodford">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Yamazaki Card #1-->
-                    <div class="front">
-                        <img src="images/yamazaki.jpg" alt="yamazaki">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-                <div class="card"> <!--Yamazaki Card #2-->
-                    <div class="front">
-                        <img src="images/yamazaki.jpg" alt="yamazaki">
-                    </div>
-                    <div class="back">
-                        <img src="images/yosemite_sam_vs_bugs_bunny.jpg" alt="yosemite_bugs">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
+    </div>
+</section>
 
 </body>
 </html>
