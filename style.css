@@ -30,6 +30,10 @@ header div {
     width: 80%;
     position: relative;
     top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
 }
 
 .reset {
@@ -40,10 +44,7 @@ header div {
     margin: 10px 10px;
     text-align: center;
 }
-/*.cardArea {
-    width: 100%;
-    margin: auto;
-}*/
+
 #statsContainer {
     display: inline;
     text-align: center;
@@ -72,6 +73,7 @@ header div {
     border-radius: 10%;
 }
 .card {
+
     position: relative;
     width: 14%;
     height: 20vh;
@@ -88,7 +90,6 @@ header div {
 /*    border: 6px solid whitesmoke;*/
 /*    border-radius: 25px;*/
 /*    box-shadow: 4px 4px 6px #7b7b78;*/
-
 }
 .front .back, .card{
     display: inline-block;
