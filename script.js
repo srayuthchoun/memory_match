@@ -6,35 +6,31 @@ var clickReady = true;
 var matches = 0;
 var attempts = 0;
 var accuracy = 0;
-var games_played = 0;
 var random_card_faces = [];
 
 $(document).ready(function () {
     randomize_cards();
 
-    $('.card').click(function () {  //click event function on class card
+    $('.card').on("click", function () {  //click event function on class card
         /*$(this).addClass('card_clicked'); //add class card_clicked to elements of class .back*/
         card_clicked(this); //function call for card clicked to compare cards
         display_stats(); //function call to display_stats
     });
 
-    $('.reset').click(function () { //resets stats with reset game button is clicked
+    $('.reset').on("click", function () { //resets stats with reset game button is clicked
         reset_stats(); //function call to set variables back to 0
     });
 
-    $('.play_music').click(function () {
-
+    $('.play_music').on("click", function () {
         $('.play_music').hide();
         $('.mute_music').show();
         play_music();
 
     });
-    $('.mute_music').click(function () {
-
+    $('.mute_music').on("click", function () {
         $('.mute_music').hide();
         $('.play_music').show();
         mute_music();
-
     });
 
 });
@@ -91,16 +87,11 @@ function card_clicked(selected_card) { //function with the parameter of the card
     if (first_card_clicked == null) { //checks if condition equals
         first_card_clicked = $(selected_card); //finds img value of 1st card
         console.log("first_card_clicked " + first_card_clicked);
-        /*$(selected_card).find('.back').hide(); //finds class back and sets display to none*!/*/
-
-
     }
     else {
         second_card_clicked = $(selected_card); //finds img value of 2nd card
         console.log('second card: ', second_card_clicked); //output second card clicked
         attempts++; //increment attempts
-        /*(selected_card).find('.back').hide();  //finds class back and sets display to none*/
-        /*comparison(first_card_clicked, second_card_clicked); //function compares the 2 cards*/
         if ($(first_card_clicked).find('.front > img').attr('src') == $(second_card_clicked).find('.front > img').attr('src')) { //compares first and second selected cards
             console.log("comparision");
             /*$('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards*/
@@ -109,11 +100,14 @@ function card_clicked(selected_card) { //function with the parameter of the card
             first_card_clicked = null; //set first_card_clicked to null
             second_card_clicked = null; //set second_card_clicked to null
             matches++; //increment matches
+            if (match_counter == total_possible_matches) { //compares the value fo match_counter and total_possible_matches
+                $('#winner').show();
+                $('#game_music').trigger('pause');
+                $('#win_voice').trigger('play');
+            }
 
         }
         else {
-            /*$('.card_clicked').delay(1000).show(10); //sets the delay time to show the back card*/
-            /*$('.back').removeClass('card_clicked'); //removes card_click class from the selected cards*/
             console.log("comparison else");
             clickReady = false; //sets clickReady to false so cards other cards can't be clicked
             setTimeout(function () {  //timeout function to turn click enable back to true*/
@@ -151,17 +145,11 @@ function card_clicked(selected_card) { //function with the parameter of the card
         }
 
         calc_accuracy(); //function to calculate accuracy
-        /*        if (match_counter == total_possible_matches){ //compares the value fo match_counter and total_possible_matches
-         /!*calc_accuracy(); //function to calculate accuracy*!/
-         /!*alert('Winner! All cards matched.'); //window pop up stating all cards matched*!/
-         console.log("winner!");
-         }*/
     }
 }
 
 function display_stats() {  //function to add value to attempts, games-played and accuracy
     $('.attempts .value').text(attempts); //add value to attempts
-    $('.games-played .value').text(games_played); //add value to games_played
     $('.accuracy .value').text(accuracy + '%'); //add value to accuracy
     $('.matches .value').text(matches); //adds value to matches
 }
@@ -171,19 +159,7 @@ function calc_accuracy() { //function to calculate accuracy
 }
 
 function reset_stats() { //function to reset stats
-
-    accuracy = 0; //set accuracy to 0
-    matches = 0; //set matches to 0
-    attempts = 0; //set attempts to 0
-    match_counter = 0;
-    games_played++; //increments game_played
-    display_stats(); //resets the value to reset for the function
     location.reload();
-    random_card_faces = [];
-    $('.card').remove();
-    $('.front').remove();
-    $('.back').remove();
-    randomize_cards();
 }
 
 function play_music() {
