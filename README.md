@@ -7,8 +7,9 @@ Once the player matches 2 cards they will be displayed face up until all pairs h
 displayed a message that they have won the game. As the user clicks through the cards, stats will be updated to show the user the number of attempts and the accuracy.
 
 ##Implemented Features
-1. Mobile Responsive
-2. Animations
-3. Randomize cards
-4. Audio clips during play and for winning
-5. Stats showing accuracy, matches and attempts
+
+- Animations
+- Mobile Responsive
+- Randomize cards
+- Audio clips during play and for winning
+- Stats showing accuracy, matches and attempts
