@@ -8,6 +8,7 @@ displayed a message that they have won the game. As the user clicks through the 
 
 ##Implemented Features
 1. Mobile Responsive
-2. DOM creation
-3. Audio clips during play and for winning
-4. Stats showing accuracy, matches and attempts
+2. Animations
+3. Randomize cards
+4. Audio clips during play and for winning
+5. Stats showing accuracy, matches and attempts
