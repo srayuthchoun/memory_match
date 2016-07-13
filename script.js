@@ -94,13 +94,16 @@ function card_clicked(selected_card) { //function with the parameter of the card
         attempts++; //increment attempts
         if ($(first_card_clicked).find('.front > img').attr('src') == $(second_card_clicked).find('.front > img').attr('src')) { //compares first and second selected cards
             console.log("comparision");
-            /*$('.card_clicked').removeClass('card_clicked'); //removes card_clicked class from the selected cards*/
+            $(first_card_clicked).unbind("click");
+            $(second_card_clicked).unbind("click");
             match_counter++; //increments the match_counter
             calc_accuracy();
             first_card_clicked = null; //set first_card_clicked to null
             second_card_clicked = null; //set second_card_clicked to null
             matches++; //increment matches
             if (match_counter == total_possible_matches) { //compares the value fo match_counter and total_possible_matches
+                $('.front').remove();
+                $('.back').remove();
                 $('#winner').show();
                 $('#game_music').trigger('pause');
                 $('#win_voice').trigger('play');

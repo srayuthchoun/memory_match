@@ -21,7 +21,7 @@ header h5 {
     color: white;
     text-shadow: 12px 6px 10px #a71201;
     font-size: 5vw;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans MS", sans-serif;
 }
 
 .cardSection {
@@ -95,11 +95,18 @@ footer {
 }
 
 footer div {
-
     color: white;
     margin: .2% 2% 0 2%;
 }
 
+.stats_buttons {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.stats_buttons button {
+    border-radius: 45%;
+}
 .label {
     font-size: 2vw;
 }
